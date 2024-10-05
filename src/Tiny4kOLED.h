@@ -7,8 +7,9 @@
  */
 #ifndef TINY4KOLED_H
 #define TINY4KOLED_H
-
-#if defined(TwoWire_h) || defined (USIWire_h)
+#if defined(SoftwareWire_h)
+#include "Tiny4kOLED_SoftwareWire.h"
+#elif defined(TwoWire_h) || defined (USIWire_h)
 #include "Tiny4kOLED_Wire.h"
 #elif defined(TinyWireM_h)
 #include "Tiny4kOLED_TinyWireM.h"
